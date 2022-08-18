@@ -19,9 +19,9 @@ const Header = () => {
         {/* <div className="row"> */}
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <div className="Logo">
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="logo">
               Logo
-            </a>
+            </Link>
           </div>
           <div>
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -41,12 +41,12 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/events">
                   Events
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="#">
+                <Link className="nav-link" to="/blog">
                   Blog
                 </Link>
               </li>
