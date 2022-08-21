@@ -6,7 +6,8 @@ import Homepage from "./Components/Homepage/Homepage";
 import Layout from "./Components/Layout/Layout";
 import About from "./Components/About/About";
 import Services from "./Components/Services/Services";
-
+import Admin from "./Admin";
+import Mhs from "./Components/Mhs";
 function App() {
   return (
     <div className="App">
@@ -15,8 +16,10 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Homepage />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/Mhs" element={<Mhs />} />
             <Route path="about" element={<About />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/services" element={<Services />} />
           </Route>
         </Routes>
       </BrowserRouter>
@@ -25,6 +28,9 @@ function App() {
 }
 
 export default App;
+
+// <Route path="/services" element={<Services />} />
+
 //<Route path="/" element={<Headers />}></Route>
 
 // router dom will link to diffrent componets
