@@ -8,6 +8,8 @@ import About from "./Components/About/About";
 import Services from "./Components/Services/Services";
 import Admin from "./Admin";
 import Mhs from "./Components/Mhs";
+import Register from "./Components/Register";
+import Comment from "./Components/Comment";
 function App() {
   return (
     <div className="App">
@@ -15,11 +17,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/" element={<Homepage />} />
             <Route path="/Mhs" element={<Mhs />} />
             <Route path="about" element={<About />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/comment/:id" element={<Comment />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import APIUrl from "../../APIUrl.js";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import APIUrl from "../APIUrl";
 
 // const Login = () => {
 //   const login = async () => {
@@ -26,22 +26,17 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 // };
 
 // export default Login;
-const Login = () => {
+const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-
-  const isNewUser = searchParams.get("newUser");
-
-  console.log(searchParams);
 
   const login = async (evt) => {
     evt.preventDefault();
 
     try {
-      const response = await fetch(`${APIUrl}/login`, {
+      const response = await fetch(`${APIUrl}/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +53,7 @@ const Login = () => {
         setError(data.error);
       } else {
         //redirect to next screen here, login was succcessful
-        navigate("/admin");
+        navigate("/login?newUser=true");
       }
     } catch (error) {
       setError("Login API call failed. Check console for more details.");
@@ -68,8 +63,7 @@ const Login = () => {
 
   return (
     <div>
-      <h1>Login</h1>
-      {isNewUser && <p>Your account has been created. Please log in.</p>}
+      <h1>register</h1>
       <form onSubmit={login}>
         <div className="mb-3">
           <label htmlFor="username" className="form-label">
@@ -101,14 +95,11 @@ const Login = () => {
         </div>
         <p style={{ color: "red" }}>{error}</p>
         <button type="submit" className="btn btn-primary">
-          Login
-        </button>
-        <button>
-          <Link to="/register">Register Here!</Link>
+          Register
         </button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Register;
