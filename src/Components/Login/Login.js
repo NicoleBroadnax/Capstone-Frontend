@@ -102,10 +102,12 @@ const Login = () => {
         <p style={{ color: "red" }}>{error}</p>
         <button type="submit" className="btn btn-primary">
           Login
-        </button>
-        <button>
+        </button>{" "}
+        <br />
+        <button type="submit" className="btn btn-warning">
           <Link to="/register">Register Here!</Link>
         </button>
+        <br />
       </form>
     </div>
   );

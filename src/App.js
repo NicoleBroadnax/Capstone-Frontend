@@ -10,6 +10,9 @@ import Admin from "./Admin";
 import Mhs from "./Components/Mhs";
 import Register from "./Components/Register";
 import Comment from "./Components/Comment";
+import Employment from "./Employment";
+import Family from "./Components/Family";
+import ForgotPassword from "./ForgotPassword";
 function App() {
   return (
     <div className="App">
@@ -22,8 +25,10 @@ function App() {
             <Route path="/Mhs" element={<Mhs />} />
             <Route path="about" element={<About />} />
             <Route path="/admin" element={<Admin />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/services/:type" element={<Services />} />
             <Route path="/comment/:id" element={<Comment />} />
+            <Route path="/forgotPassword" element={<ForgotPassword />} />
+            <Route path="/family" element={<Family />} />
           </Route>
         </Routes>
       </BrowserRouter>
