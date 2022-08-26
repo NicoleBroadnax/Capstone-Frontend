@@ -7,11 +7,11 @@ import Layout from "./Components/Layout/Layout";
 import About from "./Components/About/About";
 import Services from "./Components/Services/Services";
 import Admin from "./Admin";
-import Mhs from "./Components/Mhs";
+import Mhs from "./Components/Services/Mhs";
 import Register from "./Components/Register";
 import Comment from "./Components/Comment";
-import Employment from "./Employment";
-import Family from "./Components/Family";
+import Employment from "./Components/Services/Employment";
+import Family from "./Components/Services/Family";
 import ForgotPassword from "./ForgotPassword";
 function App() {
   return (

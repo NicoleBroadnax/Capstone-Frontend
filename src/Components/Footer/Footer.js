@@ -5,11 +5,12 @@ const Footer = () => {
         position: "fixed",
         bottom: 0,
         border: "1px solid grey",
-        padding: 20,
+        padding: 5,
         width: "100%",
         background: "white",
       }}
     >
+      {" "}
       <p>©2022 Nicole Broadnax</p>Footer
     </footer>
   );

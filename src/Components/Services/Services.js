@@ -20,6 +20,7 @@ const Services = () => {
         return (
           <div key={service.id}>
             {service.name}
+            <p> {service.category}</p>
             <p>{service.description}</p>
           </div>
         );

@@ -1,10 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import "./Homepage.scss";
+import Search from "../Search/Search";
 
 const Homepage = () => {
   return (
     <div>
+      <div className="container">
+        <Search />
+      </div>
       <div className="row">
         <div className="col-4 ">
           <div className="card h-100">
