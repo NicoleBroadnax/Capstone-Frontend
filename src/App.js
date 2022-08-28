@@ -13,6 +13,7 @@ import Comment from "./Components/Comment";
 import Employment from "./Components/Services/Employment";
 import Family from "./Components/Services/Family";
 import ForgotPassword from "./ForgotPassword";
+import Service from "./Components/Service/Service";
 function App() {
   return (
     <div className="App">
@@ -29,6 +30,7 @@ function App() {
             <Route path="/comment/:id" element={<Comment />} />
             <Route path="/forgotPassword" element={<ForgotPassword />} />
             <Route path="/family" element={<Family />} />
+            <Route path="/service/:id" element={<Service />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -19,7 +19,7 @@ const Header = () => {
         {/* <div className="row"> */}
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <div className="Logo">
-            <Link className="navbar-brand" to="logo">
+            <Link className="navbar-brand" to="/">
               Logo
             </Link>
           </div>
@@ -30,9 +30,9 @@ const Header = () => {
                   Home
                 </Link>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                   href="#"
                   role="button"
@@ -40,24 +40,24 @@ const Header = () => {
                 >
                   Services
                 </a>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
-                    <Link class="dropdown-item" to="/services/mhs">
+                    <Link className="dropdown-item" to="/services/mhs">
                       Mental Health Services
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="/services/family">
+                    <Link className="dropdown-item" to="/services/family">
                       Family & Social Support
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="/services/education">
+                    <Link className="dropdown-item" to="/services/education">
                       Education
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="/services/employment">
+                    <Link className="dropdown-item" to="/services/employment">
                       Employment & Income
                     </Link>
                   </li>
