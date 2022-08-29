@@ -58,7 +58,7 @@ const Homepage = () => {
         </div>
         <div className="col">
           <div className="card h-100">
-            <img src="..." className="card-img-top" alt="..." />
+            <img src="Books.jpg" className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Education</h5>
               <p className="card-text">
@@ -73,7 +73,7 @@ const Homepage = () => {
             <div className="col">
               <Link to="/services/employment">
                 <div className="card h-100">
-                  <img src="..." className="card-img-top" alt="..." />
+                  <img src="Work.avif" className="card-img-top" alt="..." />
                   <div className="card-body">
                     <h5 className="card-title">Employment & Income </h5>
                     <p className="card-text">
