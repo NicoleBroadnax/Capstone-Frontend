@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -25,9 +25,9 @@ const Services = () => {
                 <h6 className="card-subtitle mb-2 text-muted">hello World</h6>
                 <p className="card-text">
                   {service.description}
-                  <a href="#" className="card-link">
+                  <Link to="/service/:service.id" className="card-link">
                     Card link
-                  </a>
+                  </Link>
                   <a href="#" className="card-link">
                     Another link
                   </a>

@@ -20,7 +20,13 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <div className="Logo">
             <Link className="navbar-brand" to="/">
-              Logo
+              <img
+                src="SyracuseImpact.png"
+                alt="Logo"
+                width="200"
+                height="40
+                "
+              />
             </Link>
           </div>
           <div>
@@ -98,3 +104,4 @@ const Header = () => {
 };
 
 export default Header;
+//<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
