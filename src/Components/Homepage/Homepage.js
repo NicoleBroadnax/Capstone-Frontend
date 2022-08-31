@@ -10,7 +10,7 @@ const Homepage = () => {
         <div className="welcome">
           <p>Nicole is awesome. Yay family!</p>
         </div>
-        {/* <Search /> */}
+        <Search />
       </div>
       <div className="row">
         <div className="col-4 ">
@@ -20,7 +20,6 @@ const Homepage = () => {
                 src="Books.jpg
             "
                 className="card-img-top"
-                alt="..."
               />
               <div className="card-body">
                 <h5 className="card-title">Mental Health Services </h5>

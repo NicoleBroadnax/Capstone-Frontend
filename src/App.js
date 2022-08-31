@@ -14,6 +14,8 @@ import Employment from "./Components/Services/Employment";
 import Family from "./Components/Services/Family";
 import ForgotPassword from "./ForgotPassword";
 import Service from "./Components/Service/Service";
+import Search from "./Components/Search/Search";
+
 function App() {
   return (
     <div className="App">
@@ -31,6 +33,7 @@ function App() {
             <Route path="/forgotPassword" element={<ForgotPassword />} />
             <Route path="/family" element={<Family />} />
             <Route path="/service/:id" element={<Service />} />
+            <Route path="admin/comment/new" element={<Comment />} />
           </Route>
         </Routes>
       </BrowserRouter>
@@ -39,6 +42,8 @@ function App() {
 }
 
 export default App;
+
+// <Route path="/search/services/type element={<Search />} />
 
 // <Route path="/services" element={<Services />} />
 
