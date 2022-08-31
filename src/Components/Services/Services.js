@@ -25,11 +25,11 @@ const Services = () => {
                 <h6 className="card-subtitle mb-2 text-muted">hello World</h6>
                 <p className="card-text">
                   {service.description}
-                  <Link to="/service/:service.id" className="card-link">
+                  <Link to={`/service/${service.id}`} className="card-link">
                     Card link
                   </Link>
-                  <a href="#" className="card-link">
-                    Another link
+                  <a href={service.website} className="card-link">
+                    Offical Site
                   </a>
                 </p>
               </div>
