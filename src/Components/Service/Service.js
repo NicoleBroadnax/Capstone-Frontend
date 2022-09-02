@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import APIUrl from "../../APIUrl";
-import Comment from "../Comment";
 
 //import useParams from react-router-dom
 //import useState from react
 const Service = () => {
   const [service, setService] = useState(); //create state to store serivce
-  const [content, setContent] = useState();
+  const [content, setContent] = useState("");
+
   const params = useParams(); //add const params = useParams();
   useEffect(() => {
     //add useEffect
@@ -22,8 +22,17 @@ const Service = () => {
     getService(); //call getService()
   }, []);
 
-  const createNewComment = () => {
-    
+  const createNewComment = async (evt) => {
+    evt.preventDefault();
+
+    const res = await fetch(`${APIUrl}/comment/${params.id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ content }),
+      credentials: "include",
+    });
   };
 
   if (!service) {
@@ -43,17 +52,7 @@ const Service = () => {
         );
       })}
       <form onSubmit={createNewComment}>
-        <label>Content</label>
-        <input
-          type="text"
-          className="form-control"
-          value={content}
-          onChange={(evt) => {
-            setContent(evt.target.value);
-          }}
-        />
-        <br />
-        <label>Post Content:</label>
+        <label>Service Review :</label>
         <textarea
           className="form-control"
           value={content}
@@ -63,7 +62,7 @@ const Service = () => {
         ></textarea>
         <br />
         <button type="submit" className="btn btn-primary">
-          Post
+          Post Comment
         </button>
       </form>
     </div>
@@ -71,9 +70,3 @@ const Service = () => {
 };
 
 export default Service;
-
-{
-  /* <div>
-<h1>{service.name}</h1>
-</div> */
-}

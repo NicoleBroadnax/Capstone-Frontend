@@ -26,6 +26,12 @@ a {
     }
 
 }
+.col text-center {
+    justify-content: center;
+}
+.container text-center{
+    margin: -145px;
+}
 
 // .Homepage{
 //     background-color: black
@@ -38,3 +44,8 @@ a {
 // .Homepage{
 //     background-color: blue;
 // }
+
+.card-img-top1{
+    max-height: 400px;
+    max-width: 300%;
+}

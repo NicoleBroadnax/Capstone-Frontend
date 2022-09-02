@@ -5,7 +5,7 @@ const Search = () => {
     <div className="container">
       <section className="search-sec">
         <div className="container">
-          <form action="#" method="post" novalidate="novalidate">
+          <form action="#" method="post" noValidate="noValidate">
             <div className="row">
               <div className="col-lg-12">
                 <div className="row">
