@@ -21,11 +21,10 @@ const Header = () => {
           <div className="Logo">
             <Link className="navbar-brand" to="/">
               <img
-                src="SyracuseImpact.png"
+                src="Syracuseimapct.png"
                 alt="Logo"
                 width="200"
-                height="40
-                "
+                height="40"
               />
             </Link>
           </div>

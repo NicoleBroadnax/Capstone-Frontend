@@ -1,6 +1,14 @@
-.row {
-    margin-top: 25px;
+// .row {
+//     margin-top: 25px;
+// }
+
+#MHS{
+    height: 500px;
+width: 100%;
+// margin:
 }
+
+
 
 a {
     text-decoration: none;
@@ -10,6 +18,7 @@ a {
         color: black;
     }
 }
+
 
 .welcome{
     height: 300px;
@@ -22,7 +31,6 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        
     }
 
 }
@@ -45,7 +53,3 @@ a {
 //     background-color: blue;
 // }
 
-.card-img-top1{
-    max-height: 400px;
-    max-width: 300%;
-}

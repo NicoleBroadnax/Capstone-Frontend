@@ -7,25 +7,19 @@ const Homepage = () => {
   return (
     <div>
       <div className="container text-center">
-        <div className="welcome">
+        <div className="welcome" id="MHS">
           <p>Nicole is awesome. Yay family!</p>
+          <Search />
         </div>
-        <Search />
       </div>
 
-      <div
-        className="col text-center"
-      ></div>
-      <div className="row row-cols-4">
+      <div className="row">
         <div className="col">
           <Link to="/services/mhs">
-            <div className="card h-100">
-              <img
-                src="Books.jpg
-            "
-                className="card-img-top"
-              />
+            <div className="card">
+              <img src="Books.jpg" className="card-img-top" />
               <div className="card-body">
+                <h5 className="card-title"></h5>
                 <button className="btn btn-secondary">
                   Mental Health Services
                 </button>
@@ -33,23 +27,23 @@ const Homepage = () => {
             </div>
           </Link>
         </div>
+
         <div className="col">
           <Link to="/services/family">
-            <div className="card h-100">
+            <div className="card">
               <img src="Family.avif" className="card-img-top1" alt="..." />
               <div className="card-body">
-                <h5 className="card-title">Family&Social Support</h5>
-
+                <h5 className="card-title">Family & Social Support</h5>
                 <button className="btn btn-primary">
-                  Family&Social Support
+                  Family & Social Support
                 </button>
               </div>
-              <div className="card-footer"></div>
             </div>
           </Link>
         </div>
+
         <div className="col">
-          <div className="card h-100">
+          <div className="card">
             <img src="Books.jpg" className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Education</h5>
@@ -59,18 +53,18 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <Link to="/services/employment">
-          <div className="card">
-            <img src="Work.avif" className="card-img-top" />
-            <div className="card-body">
-              <h5 className="card-title">Employment & Income</h5>
+      </div>
 
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
+      <div className="col">
+        <div className="card">
+          <img src="Work.avif" className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">Employment & Income</h5>
+            <Link className="btn btn-primary" to="/services/employment">
+              Employment & Income
+            </Link>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   );

@@ -9,16 +9,17 @@ const Service = () => {
   const [content, setContent] = useState("");
 
   const params = useParams(); //add const params = useParams();
+
+  const getService = async () => {
+    //add async fucntion called getService
+    const res = await fetch(`http://localhost:3001/service/${params.id}`); //fetch to /serivce/${params.id}
+    const data = await res.json(); //json
+    setService(data.service); //store in setService state
+    console.log(data);
+  };
+
   useEffect(() => {
     //add useEffect
-
-    const getService = async () => {
-      //add async fucntion called getService
-      const res = await fetch(`http://localhost:3001/service/${params.id}`); //fetch to /serivce/${params.id}
-      const data = await res.json(); //json
-      setService(data.service); //store in setService state
-      console.log(data);
-    };
     getService(); //call getService()
   }, []);
 
@@ -33,6 +34,7 @@ const Service = () => {
       body: JSON.stringify({ content }),
       credentials: "include",
     });
+    getService();
   };
 
   if (!service) {
@@ -43,6 +45,7 @@ const Service = () => {
   return (
     <div>
       <h1>service</h1>
+      <img src={service.Image} />
       {service.comments.map((comment) => {
         return (
           <div key={comment.rating}>

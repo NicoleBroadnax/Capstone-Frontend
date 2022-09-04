@@ -50,8 +50,7 @@ const Admin = () => {
       >
         Logout
       </span>
-      {" | "}
-      <Link to="admin/comments/new">New Comments</Link>
+
       <table className="table">
         <thead>
           <tr>
