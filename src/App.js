@@ -33,7 +33,7 @@ function App() {
             <Route path="/forgotPassword" element={<ForgotPassword />} />
             <Route path="/family" element={<Family />} />
             <Route path="/service/:id" element={<Service />} />
-            <Route path="admin/comment/new" element={<Comment />} />
+            <Route path="admin/comment/:id" element={<Comment />} />
           </Route>
         </Routes>
       </BrowserRouter>

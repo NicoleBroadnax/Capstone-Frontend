@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import APIUrl from "./APIUrl";
-import { useNavigate, Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const Admin = () => {
   const navigate = useNavigate();
-  const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState([]);
+  const params = useParams();
 
   useEffect(() => {
     const checkLoginStatus = async () => {
@@ -14,27 +15,28 @@ const Admin = () => {
       const data = await response.json();
       console.log(data);
       if (data.isLoggedIn) {
-        getPosts();
+        getComments();
       } else {
         navigate("/login");
       }
     };
     checkLoginStatus();
-  }, [navigate]);
+  }, []);
 
-  const getPosts = async () => {
-    const response = await fetch(`${APIUrl}/posts`);
+  const getComments = async () => {
+    const response = await fetch(`${APIUrl}/comments`);
     const data = await response.json();
-    setPosts(data.posts);
+    setComments(data.comments);
+    console.log(data.comments);
   };
 
-  const deletePost = async (id) => {
+  const deleteComment = async (id) => {
     if (window.confirm("You sure ya wanna delete this?")) {
-      await fetch(`${APIUrl}/post/${id}`, {
+      await fetch(`${APIUrl}/comment/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
-      getPosts();
+      getComments();
     }
   };
 
@@ -50,7 +52,8 @@ const Admin = () => {
       >
         Logout
       </span>
-
+      {" | "}
+      <Link to="admin/comments/new">New Comments</Link>
       <table className="table">
         <thead>
           <tr>
@@ -60,17 +63,17 @@ const Admin = () => {
           </tr>
         </thead>
         <tbody>
-          {posts.map((post) => {
+          {comments.map((comment) => {
             return (
-              <tr key={post.id}>
-                <td>{post.title}</td>
+              <tr key={comment.id}>
+                <td>{comment.content}</td>
                 <td>
-                  <Link to={`/comment/${post.id}`}>Edit</Link>
+                  <Link to={`admin/comments/${comment.id}`}>Edit</Link>
                 </td>
                 <td>
                   <span
                     onClick={() => {
-                      deletePost(post.id);
+                      deleteComment(comment.id);
                     }}
                   >
                     Delete

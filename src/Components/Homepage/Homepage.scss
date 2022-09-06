@@ -2,44 +2,65 @@
 //     margin-top: 25px;
 // }
 
+// #MHS{
+//     height: 500px;
+// width: 100%;
+// // margin:
+// }
+
+
 #MHS{
-    height: 500px;
-width: 100%;
-// margin:
+    background-image: url("./bigfamily.jpg");
+    background-size: cover;
+    background-Repeat: no-repeat;
+     background-Position: center;
+     height: 400px;
+     width: auto;
 }
 
 
 
-a {
-    text-decoration: none;
-    cursor: pointer;
 
-    p{
-        color: black;
-    }
-}
 
+
+
+// a {
+//     text-decoration: none;
+//     cursor: pointer;
+
+//     p{
+//         color: black;
+//     }
+// // }
+// .home{
+//     background-image: url("./bigfamily.jpg");
+//     background-size: cover;
+//     background-Repeat: no-repeat;
+//     background-Position: center;
+//     height: 500px;
+//     width: auto;
+// }
 
 .welcome{
     height: 300px;
-    background-image: url("./unsplash.jpg");
+    
     background-size: cover;
     background-position: center;
     text-align: center;
    
-    p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+//     p{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
 
-}
-.col text-center {
-    justify-content: center;
-}
-.container text-center{
-    margin: -145px;
-}
+// }
+// .col text-center {
+//     justify-content: center;
+// }
+// .container text-center{
+//     margin: -145px;
+// }
 
 // .Homepage{
 //     background-color: black
@@ -50,6 +71,6 @@ a {
 // }
 
 // .Homepage{
-//     background-color: blue;
-// }
+//     background-color: blue; }
 
+}

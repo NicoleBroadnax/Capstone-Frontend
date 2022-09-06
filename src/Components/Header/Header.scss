@@ -1,0 +1,52 @@
+// #MHS{
+//     background-image: url("./bigfamily.jpg");
+//     background-size: cover;
+//     background-Repeat: no-repeat;
+//      background-Position: center;
+//      height: 700px;
+//      width: auto;
+// }
+
+.bg-light{
+    background-color: transparent !important;
+}
+
+.navbar .btn{
+    background-color: blue;
+    color: white;
+    margin-right: 10px;
+}
+
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+
+    p{
+        color: black;
+    }
+}
+
+
+// .welcome{
+//     height: 300px;
+//     background-image: url("./");
+//     background-size: cover;
+//     background-position: center;
+//     text-align: center;
+
+
+   
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+// }
+.col text-center {
+    justify-content: center;
+}
+.container text-center{
+    margin: -145px;
+}
