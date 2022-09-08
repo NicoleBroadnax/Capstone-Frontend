@@ -2,7 +2,7 @@ import "./Search.scss";
 
 const Search = () => {
   return (
-    <div className="container">
+    <div className="container" id="searchContainer">
       <section className="search-sec">
         <div className="container">
           <form action="#" method="post" noValidate="noValidate">

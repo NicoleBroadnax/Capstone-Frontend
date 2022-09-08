@@ -14,8 +14,19 @@
 .navbar .btn{
     background-color: blue;
     color: white;
+    text-shadow: orange;
     margin-right: 10px;
 }
+#navtext{
+    outline-color: white;
+}
+
+a.nav-link{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   color: white;
+}
+
+
 
 
 a {
@@ -49,4 +60,12 @@ a {
 }
 .container text-center{
     margin: -145px;
+}
+
+h2{
+    color: white;
+}
+
+h1{
+    color: white;
 }

@@ -6,7 +6,10 @@ const Header = () => {
   return (
     <div>
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav
+          className="navbar navbar-expand-lg navbar-light bg-light"
+          id="navtext"
+        >
           <button
             className="navbar-toggler"
             type="button"
@@ -22,12 +25,7 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <div className="Logo">
               <Link className="navbar-brand" to="/">
-                <img
-                  src="./SyracuseImpact.png"
-                  alt="Logo"
-                  width="200"
-                  height="40"
-                />
+                <img src="/2.png" alt="Logo" width="200" height="40" />
               </Link>
             </div>
             <div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import "./Services.scss";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -14,29 +15,41 @@ const Services = () => {
   }, [type]);
 
   return (
-    <div>
-      <h1>Services</h1>
-      {services.map((service) => {
-        return (
-          <div key={service.id}>
-            <div className="card" style={{ width: "18rem" }}>
-              <div className="card-body">
-                <h5 className="card-title">{service.name}</h5>
-                <h6 className="card-subtitle mb-2 text-muted">hello World</h6>
-                <p className="card-text">
-                  {service.description}
-                  <Link to={`/service/${service.id}`} className="card-link">
-                    Card link
-                  </Link>
-                  <a href={service.website} className="card-link">
-                    Offical Site
-                  </a>
-                </p>
+    <div id="page">
+      <h1>{type}</h1>
+      <div className="container" id="cardContainer">
+        {services.map((service) => {
+          return (
+            <div key={service.id}>
+              <div
+                className="card border-primary mb-3"
+                style={{ width: "18rem" }}
+              >
+                <div className="card-body">
+                  <h5 className="card-title">{service.name}</h5>
+                  <h6 className="card-subtitle mb-2 text-muted" id="MentalHS">
+                    Mental Health Services
+                  </h6>
+                  <p className="card-text">
+                    {service.description}
+                    <button className="btn btn-primary">
+                      <Link to={`/service/${service.id}`} className="card-link">
+                        Card link
+                      </Link>
+                    </button>
+                    <button className="btn btn-primary">
+                      {" "}
+                      <a href={service.website} className="card-link">
+                        Offical Site
+                      </a>
+                    </button>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

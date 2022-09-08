@@ -10,12 +10,36 @@
 
 
 #MHS{
-    background-image: url("./bigfamily.jpg");
+    background-image: url("./families.png");
     background-size: cover;
     background-Repeat: no-repeat;
      background-Position: center;
-     height: 400px;
+     height: 630px;
      width: auto;
+     background-color: orange;
+}
+
+#cards{
+    margin-top: 175px;
+    background-color: orange;
+    
+}
+
+// h1{
+//     color: white;
+//     text-shadow: 2x 2x black;
+// }
+// h2{
+//     color: white;
+//     text-shadow: 2x 2x black;
+// }
+
+.home h1{
+    color: white;
+    text-shadow: 2px 2px black;
+} h2{
+    color: white;
+    text-shadow: 2px 2px black; 
 }
 
 
@@ -42,8 +66,9 @@
 // }
 
 .welcome{
-    height: 300px;
-    
+    height: 500px;
+    padding: 0%;
+    padding-top: 100px;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -73,4 +98,8 @@
 // .Homepage{
 //     background-color: blue; }
 
+}
+
+#MentalHS{
+    color: black;
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import APIUrl from "../../APIUrl";
+import "./Service.scss";
 
 //import useParams from react-router-dom
 //import useState from react
@@ -44,7 +45,7 @@ const Service = () => {
 
   return (
     <div>
-      <h1>service</h1>
+      <h1>{service.name}</h1>
       <img src={service.Image} />
       {service.comments.map((comment) => {
         return (

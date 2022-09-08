@@ -9,8 +9,9 @@ const Homepage = () => {
       <Header />
       <div className="text-center">
         <div className="welcome">
-          <h1>Nicole is awesome. Yay family!</h1>
-          <br />
+          <h1 className="title">Syracuse Impact</h1>
+          <h2 className="title2">Family Helping One Another</h2>
+
           <div>
             <Search />
 
@@ -85,11 +86,11 @@ const Homepage = () => {
             </div>*/}
           </div>
 
-          <div className="row">
+          <div className="row" id="cards">
             <div className="col-3">
               <Link to="/services/mhs">
                 <div className="card">
-                  <img src="Books.jpg" className="card-img-top" />
+                  <img src="Mhs.jpg" className="card-img-top" />
                   <div className="card-body">
                     <h5 className="card-title"></h5>
                     <button className="btn btn-secondary">
@@ -105,7 +106,7 @@ const Homepage = () => {
                 <div className="card">
                   <img src="Family.avif" className="card-img-top1" alt="..." />
                   <div className="card-body">
-                    <h5 className="card-title">Family & Social Support</h5>
+                    <h5 className="card-title"></h5>
                     <button className="btn btn-primary">
                       Family & Social Support
                     </button>
@@ -118,7 +119,7 @@ const Homepage = () => {
               <div className="card">
                 <img src="Books.jpg" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5 className="card-title">Education</h5>
+                  <h5 className="card-title"></h5>
                   <Link className="btn btn-primary" to="/services/mhs">
                     Education
                   </Link>
@@ -130,7 +131,7 @@ const Homepage = () => {
               <div className="card">
                 <img src="Work.avif" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5 className="card-title">Employment & Income</h5>
+                  <h5 className="card-title"></h5>
                   <Link className="btn btn-primary" to="/services/employment">
                     Employment & Income
                   </Link>

@@ -20,7 +20,7 @@ const Mhs = () => {
       <h1>mhs</h1>
       {mhs.map((mhs) => {
         return (
-          <div key={mhs.id}>
+          <div key={mhs.id} >
             <div className="card" style="width: 18rem;">
               <div className="card-body">
                 <h5 className="card-title">{mhs.name}</h5>
