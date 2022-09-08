@@ -34,7 +34,7 @@ const Services = () => {
                     {service.description}
                     <button className="btn btn-primary">
                       <Link to={`/service/${service.id}`} className="card-link">
-                        Card link
+                        Review
                       </Link>
                     </button>
                     <button className="btn btn-primary">
