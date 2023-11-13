@@ -1,11 +1,19 @@
-import { useEffect, useState } from "react";
-import APIUrl from "./APIUrl";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import APIUrl from "./APIUrl";
 
 const Admin = () => {
   const navigate = useNavigate();
+
   const [comments, setComments] = useState([]);
-  const params = useParams();
+  //const params = useParams();
+
+  const getComments = async () => {
+    const response = await fetch(`${APIUrl}/comments`);
+    const data = await response.json();
+    setComments(data);
+    console.log(data.comments);
+  };
 
   useEffect(() => {
     const checkLoginStatus = async () => {
@@ -22,13 +30,6 @@ const Admin = () => {
     };
     checkLoginStatus();
   }, []);
-
-  const getComments = async () => {
-    const response = await fetch(`${APIUrl}/comments`);
-    const data = await response.json();
-    setComments(data.comments);
-    console.log(data.comments);
-  };
 
   const deleteComment = async (id) => {
     if (window.confirm("You sure ya wanna delete this?")) {

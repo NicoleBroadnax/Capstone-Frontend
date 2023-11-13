@@ -1,6 +1,9 @@
 import "./Search.scss";
+import { useState } from "react";
 
 const Search = () => {
+  const [searchInput, setSearchInput] = useState("");
+
   return (
     <div className="container" id="searchContainer">
       <section className="search-sec">
@@ -14,6 +17,10 @@ const Search = () => {
                       type="text"
                       className="form-control search-slt"
                       placeholder="What are you looking for? "
+                      value={searchInput}
+                      onChange={(evt) => {
+                        setSearchInput(evt.target.value);
+                      }}
                     />
                   </div>
                   <div className="col-lg-3 col-md-3 col-sm-12 p-0">

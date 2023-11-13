@@ -10,7 +10,7 @@ const Homepage = () => {
       <div className="text-center">
         <div className="welcome">
           <h1 className="title">Syracuse Impact</h1>
-          <h2 className="title2">Family Helping One Another</h2>
+          <h2 className="title2">Family's Helping One Another</h2>
 
           <div>
             <Search />
@@ -90,12 +90,17 @@ const Homepage = () => {
             <div className="col-3">
               <Link to="/services/mhs">
                 <div className="card">
-                  <img src="Mhs.jpg" className="card-img-top" />
+                  <img
+                    src="Mhs.jpg"
+                    className="card-img-top"
+                    alt="Mental Health Services"
+                  />
                   <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <button className="btn btn-secondary">
-                      Mental Health Services
-                    </button>
+                    <h5 className="card-title">
+                      <button className="btn btn-secondary">
+                        Mental Health Services
+                      </button>
+                    </h5>
                   </div>
                 </div>
               </Link>
@@ -104,12 +109,26 @@ const Homepage = () => {
             <div className="col-3">
               <Link to="/services/family">
                 <div className="card">
-                  <img src="Family.avif" className="card-img-top1" alt="..." />
+                  <img src="Family.avif" className="card-img-top" alt="..." />
                   <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <button className="btn btn-primary">
-                      Family & Social Support
-                    </button>
+                    <h5 className="card-title">
+                      <button className="btn btn-primary">
+                        Family & Social Support
+                      </button>
+                    </h5>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            <div className="col-3">
+              <Link to="/services/Education">
+                <div className="card">
+                  <img src="Books.jpg" className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">
+                      <button className="btn btn-primary">Education</button>
+                    </h5>
                   </div>
                 </div>
               </Link>
@@ -117,24 +136,13 @@ const Homepage = () => {
 
             <div className="col-3">
               <div className="card">
-                <img src="Books.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title"></h5>
-                  <Link className="btn btn-primary" to="/services/mhs">
-                    Education
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-3">
-              <div className="card">
                 <img src="Work.avif" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5 className="card-title"></h5>
-                  <Link className="btn btn-primary" to="/services/employment">
-                    Employment & Income
-                  </Link>
+                  <h5 className="card-title">
+                    <Link className="btn btn-primary" to="/services/employment">
+                      Employment & Income
+                    </Link>
+                  </h5>
                 </div>
               </div>
             </div>
